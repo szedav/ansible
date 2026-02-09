@@ -1,6 +1,6 @@
 ---
 - name: Nginx telepitese
-  hosts: web_servers        
+  hosts: web_os       
   become: yes               
   
   vars:
@@ -34,4 +34,5 @@
         service: http
         permanent: yes
         state: enabled
+
         immediate: yes
