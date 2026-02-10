@@ -1,17 +1,12 @@
 ---
 - name: Nginx telepitese
-  hosts: web_os       
+  hosts: web        
   become: yes               
   
   vars:
     sajat_nev: "Szécsi Dávid"  
 
   tasks:
-    - name: EPEL repository telepitese
-      dnf:
-        name: epel-release
-        state: present
-
     - name: Nginx csomag telepitese
       dnf:
         name: nginx
@@ -19,7 +14,7 @@
 
     - name: Egyedi index.html letrehozasa a Jinja2 sablonbol
       template:
-        src: index.html.j2       
+        src: index.j2       
         dest: /usr/share/nginx/html/index.html
         mode: '0644'
 
@@ -34,5 +29,4 @@
         service: http
         permanent: yes
         state: enabled
-
         immediate: yes
