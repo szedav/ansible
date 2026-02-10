@@ -1,5 +1,5 @@
 [ansible]
-ansible_os ansible_host=192.168.56.100 ansible_user=rocky1 ansible_ssh_pass=rocky1
+ansible ansible_host=192.168.56.100 ansible_user=rocky1 ansible_password=rocky1
 
 [webserver]
-web_os_ homework ansible_host=192.168.56.101 ansible_user=homework ansible_password=homework ansible_become_password=homework
+web ansible_host=192.168.56.101 ansible_user=homework ansible_password=homework ansible_become_password=homework
