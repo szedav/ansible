@@ -8,7 +8,7 @@
 
   tasks:
     - name: Nginx csomag telepitese
-      dnf:
+      yum:
         name: nginx
         state: present
 
@@ -17,12 +17,20 @@
         src: index.j2       
         dest: usr/share/nginx/html/index.html
         mode: '0644'
+      notify: Restart Nginx 
 
     - name: Nginx elinditasa es engedelyezese (automatikus indulas)
       service:
         name: nginx
         state: started
         enabled: yes
+        
+  handlers:
+    - name: Restart Nginx
+      service:
+        name: nginx
+        state: restarted  
+
 
     - name: HTTP forgalom engedelyezese a tuzfalon
       firewalld:
