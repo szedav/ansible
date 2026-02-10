@@ -1,2 +1,2 @@
 [webserver]
-web ansible_host=192.168.56.101 ansible_port=22  ansible_user=homework ansible_password=homework ansible_become_password=homework
+web ansible_host=192.168.56.201 ansible_port=22  ansible_user=homework ansible_password=homework ansible_become_password=homework
