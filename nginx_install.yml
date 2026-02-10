@@ -1,6 +1,6 @@
 ---
 - name: Nginx telepitese
-  hosts: webserver        
+  hosts: all        
   become: yes               
   
   vars:
@@ -24,7 +24,7 @@
         name: nginx
         state: started
         enabled: yes
-        
+
   handlers:
     - name: Restart Nginx
       service:
