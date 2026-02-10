@@ -1,6 +1,6 @@
 ---
 - name: Nginx telepitese
-  hosts: web        
+  hosts: webserver        
   become: yes               
   
   vars:
@@ -30,3 +30,4 @@
         permanent: yes
         state: enabled
         immediate: yes
+
