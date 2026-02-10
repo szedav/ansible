@@ -15,7 +15,7 @@
     - name: Egyedi index.html letrehozasa a Jinja2 sablonbol
       template:
         src: index.j2       
-        dest: usr/share/nginx/html/index.html
+        dest: /usr/share/nginx/html/index.html
         mode: '0644'
       notify: Restart Nginx 
 
