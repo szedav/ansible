@@ -23,23 +23,13 @@
       service:
         name: nginx
         state: started
-        enabled: yes
-
-      
-
+        enabled: yes  
+        
   handlers:
     - name: Restart Nginx
       service:
         name: nginx
         state: restarted 
-
-        
-  - name: HTTP forgalom engedelyezese a tuzfalon
-      firewalld:
-        service: http
-        permanent: yes
-        state: enabled
-        immediate: yes
 
 
  
