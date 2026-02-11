@@ -34,7 +34,7 @@
         state: restarted 
 
         
- -  name: HTTP forgalom engedelyezese a tuzfalon
+  - name: HTTP forgalom engedelyezese a tuzfalon
       firewalld:
         service: http
         permanent: yes
@@ -45,6 +45,7 @@
  
 
         
+
 
 
 
