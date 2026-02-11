@@ -1,6 +1,6 @@
 ---
 - name: Nginx telepitese
-  hosts: web_servers    
+  hosts: webserver    
   become: yes               
   
   vars:
@@ -45,5 +45,6 @@
  
 
         
+
 
 
