@@ -1,6 +1,6 @@
 ---
 - name: Nginx telepitese
-  hosts: web_servers       
+  hosts: web_server      
   become: yes               
   
   vars:
@@ -25,6 +25,15 @@
         state: started
         enabled: yes
 
+        
+   -  name: HTTP forgalom engedelyezese a tuzfalon
+      firewalld:
+        service: http
+        permanent: yes
+        state: enabled
+        immediate: yes
+
+
   handlers:
     - name: Restart Nginx
       service:
@@ -32,11 +41,6 @@
         state: restarted  
 
 
-    - name: HTTP forgalom engedelyezese a tuzfalon
-      firewalld:
-        service: http
-        permanent: yes
-        state: enabled
-        immediate: yes
+ 
 
         
